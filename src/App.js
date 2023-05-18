@@ -1,10 +1,11 @@
 import React from "react"
+import './App.sass'
 import Tree from './Components/Tree'
 import { useLocation } from "./Components/Router"
 import { MainPage } from "./Components/DrinksScreen/DrinksScreen"
-import LemonTea from "./Components/Drinks/LemonTea"
-import Coffee from "./Components/Drinks/Coffee"
-import Chocolate from "./Components/Drinks/Chocolate"
+import LemonTea from "./Components/Drinks/LemonTea/LemonTea"
+import Coffee from "./Components/Drinks/Coffee/Coffee"
+import Chocolate from "./Components/Drinks/Chocolate/Chocolate"
 
 
 export default function App() {

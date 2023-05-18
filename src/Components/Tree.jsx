@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from './Router'
 import DrinksScreen from "./DrinksScreen/DrinksScreen"
-
+import '../App.sass'
 export default function Tree() {
     
     return(

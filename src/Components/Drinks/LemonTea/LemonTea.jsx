@@ -1,12 +1,13 @@
-import React, { Fragment } from "react"
-import { useLocation } from "../Router"
-import StepBar from "../StepBar/StepBar"
+import React from 'react'
+import { useLocation } from '../../Router'
+import StepBar from '../../StepBar/StepBar'
+import './LemonTea.sass'
 
 export default function LemonTea() {
     const {kind, drinkID, tab, popup} = useLocation( 'kind/drinkID/tab=StepOne/popup' )
 
     return(
-        <Fragment>
+        <div className='LemonTeaScreen'>
             <h1> Lemon Tea Recipe: </h1>
             <StepBar />
             { tab==='StepOne' &&
@@ -29,6 +30,6 @@ export default function LemonTea() {
                     <h2> - Add lemon and enjoy</h2>
                 </div>
             }
-        </Fragment>
+        </div>
     )
 }

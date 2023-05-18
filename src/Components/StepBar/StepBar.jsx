@@ -1,22 +1,23 @@
 import React from "react"
 import { Link, useLocation } from "../Router"
+import './StepBar.sass'
 
 export default function StepBar() {
     const { kind, id } = useLocation( 'kind/id' )
 
     return (
-        <div className='ToolBar'>
-            <Link path={[kind, id, 'StepOne']}>
-                <span>Step 1</span>
+        <div className='StepBar'>
+            <Link className='Step' path={[kind, id, 'StepOne']}>
+                <button>Step 1</button>
             </Link>
-            <Link path={[kind, id, 'StepTwo']}>
-                <span>Step 2</span>
+            <Link className='Step' path={[kind, id, 'StepTwo']}>
+                <button>Step 2</button>
             </Link>
-            <Link path={[kind, id, 'StepThree']}>
-                <span>Step 3</span>
+            <Link className='Step' path={[kind, id, 'StepThree']}>
+                <button>Step 3</button>
             </Link>
-            <Link path={[kind, id, 'StepFour']}>
-                <span>Step 4</span>
+            <Link className='Step' path={[kind, id, 'StepFour']}>
+                <button>Step 4</button>
             </Link>
         </div>
     )

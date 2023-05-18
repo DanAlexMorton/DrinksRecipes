@@ -1,13 +1,14 @@
-import React, { Fragment } from "react"
-import { useLocation } from "../Router"
-import StepBar from "../StepBar/StepBar"
+import React from 'react'
+import { useLocation } from '../../Router'
+import StepBar from '../../StepBar/StepBar'
+import './Coffee.sass'
 
-export default function Chocolate() {
+export default function Coffee() {
     const {kind, drinkID, tab, popup} = useLocation( 'kind/drinkID/tab=StepOne/popup' )
 
     return(
-        <Fragment>
-            <h1> Chocolate Recipe: </h1>
+        <div className='CoffeeScreen'>
+            <h1> Coffee Recipe: </h1>
             <StepBar />
             { tab==='StepOne' &&
                 <div>
@@ -16,19 +17,19 @@ export default function Chocolate() {
             }
             { tab==='StepTwo' &&
                 <div>
-                    <h2> - Add drinking chocolate powder to the water</h2>
+                    <h2> - Brew the coffee grounds</h2>
                 </div>
             }
             { tab==='StepThree' &&
                 <div>
-                    <h2> - Pour chocolate in the cup</h2>
+                    <h2> - Pour coffee in the cup</h2>
                 </div>
             }
             { tab==='StepFour' &&
                 <div>
-                    <h2> - Enjoy</h2>
+                    <h2> - Add sugar and milk and enjoy</h2>
                 </div>
             }
-        </Fragment>
+        </div>
     )
 }
